@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">    
+    <script
+      src="https://kit.fontawesome.com/fce196e4c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Metodos Array</title>
+  </head>
+  <body>
+    <section>
+      <div class="tittle">
+        <h1>TO DO LIST</h1>
+      </div>
+      <div class="input-text">
+        <h2>Nueva tarea</h2>
+        <form id="form" class="input-box">
+          <input
+            type="text"
+            placeholder="Escribe tu tarea"
+            class="task-input"
+            id="newTask"
+          />
+          <button type="submit" class="task-button">Agregar</button>
+        </form>
+      </div>
+      <div class="info-box">
+        <div class="count-box">
+          <p>Total: <span id="total"></span></p>
+          <p>Realizadas: <span id="done"></span></p>
+        </div>
+        <table>
+          <thead>
+            <th>ID</th>
+            <th class="padding-task">TAREA</th>
+            <th>MODIFICAR</th>
+          </thead>
+          <tbody id="taskList"></tbody>
+        </table>
+      </div>
+    </section>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
