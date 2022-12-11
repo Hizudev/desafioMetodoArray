@@ -4,19 +4,19 @@ function idGenerator(adder = 0) {
 }
 
 const render = () => {
-  taskList.innerHTML = "";
   total.innerHTML = taskArray.length;
   done.innerHTML = taskArray.filter((task) => task.done).length;
+  let html;
   taskArray.forEach((task) => {
     if (task.done) {
-      taskList.innerHTML += `<tr class="done" id="greenColor${task.id}">
+      html += `<tr class="done" id="greenColor${task.id}">
       <td class="center-options">${task.id}</td>
       <td class="padding-task">${task.description}</td>
       <td class="center-options"><input type="checkbox" onclick="doneTask(${task.id})" id="taskDoneSwitch${task.id}" checked></input>
       <i class="fa-solid fa-trash" onclick="deleteTask(${task.id})"></i></td>
       </tr>`;
     } else {
-      taskList.innerHTML += `<tr id="greenColor${task.id}">
+      html += `<tr id="greenColor${task.id}">
       <td class="center-options">${task.id}</td>
       <td class="padding-task">${task.description}</td>
       <td class="center-options"><input type="checkbox" onclick="doneTask(${task.id})" id="taskDoneSwitch${task.id}"></input>
@@ -24,6 +24,7 @@ const render = () => {
       </tr>`;
     }
   });
+  taskList.innerHTML = html;
 };
 
 const doneTask = (id) => {
