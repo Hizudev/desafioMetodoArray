@@ -6,7 +6,7 @@ function idGenerator(adder = 0) {
 const render = () => {
   total.innerHTML = taskArray.length;
   done.innerHTML = taskArray.filter((task) => task.done).length;
-  let html;
+  let html = ``;
   taskArray.forEach((task) => {
     if (task.done) {
       html += `<tr class="done" id="greenColor${task.id}">
